@@ -215,7 +215,7 @@
     <div class="containers">
         <div class="contents">
             <div class="image">
-                <img src="https://static.vecteezy.com/system/resources/previews/000/675/087/original/modern-abstract-dark-background-textures-vector.jpg"  alt="Image">
+                <img id="clickableImage" src="https://static.vecteezy.com/system/resources/previews/000/675/087/original/modern-abstract-dark-background-textures-vector.jpg" alt="Clickable Image">
             </div>
             <div class="text">
                 <p>Your text goes here.</p>
@@ -224,7 +224,23 @@
     </div>
     
     
-    
+   
+    <script>
+        let clickCount = 0;
+        const clickableImage = document.getElementById('clickableImage');
+
+        clickableImage.addEventListener('click', function() {
+            clickCount++;
+
+            // Check if the image has been clicked 10 times
+            if (clickCount >= 10) {
+                // Redirect to another webpage
+                window.location.href = "creator .html"; // Change the URL to your desired webpage
+            }
+        });
+    </script>
+
+
    
     </div>
     <footer>
