@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap You Are Finger Background Change</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0; /* Default background color */
+            transition: background-color 0.5s ease; /* Smooth transition */
+        }
+    </style>
+</head>
+<body>
+    <h1>Tap You Are Finger Background Change</h1>
+
+    <script>
+        document.addEventListener('click', function() {
+            // Change background color to a random color on click
+            var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = randomColor;
+        });
+    </script>
+</body>
+</html>

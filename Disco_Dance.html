@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Visualizer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black; /* Default background color */
+            transition: background-color 0.2s ease; /* Smooth transition */
+        }
+
+         #asdfghjkl {
+                    position: fixed;
+                    top: 20px; /* Adjust as needed */
+                    right: 20px; /* Adjust as needed */
+                    padding: 10px 20px;
+                    background-color: #007bff;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    z-index: 1000; /* Ensure it's above other content */
+                }
+
+
+
+
+
+  
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+        .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #00000000;
+            color: #ff0000;
+            padding: 20px;
+
+            text-align: center;
+            font-family: "Kode Mono", monospace;
+            font-optical-sizing: auto;
+            font-weight: bolder;
+            font-style: normal;
+
+        }
+        nav {
+            background-color: #c0870100;
+            padding: 5px;
+            text-align: center;
+            font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+
+        }
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #00000000;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #00000000;
+            color: #00000000;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+
+        .containers {
+            width: 100%;
+            overflow: hidden; /* Clear float */
+        }
+        
+        .contents {
+            display: flex;
+        }
+        
+        .image,
+        .text {
+            flex: 1; /* Distribute space evenly */
+            padding: 10px; /* Adjust as needed */
+        }
+        
+        .image img {
+            max-width: 100%;
+            height: auto;
+            
+        }
+        
+        /* Media query for mobile devices */
+        @media screen and (max-width: 768px) {
+            .contents {
+                flex-direction: column; /* Stack items vertically */
+            }
+        }
+
+        #zswedd{
+
+            font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color:#00B5E2;
+  text-shadow: 2px 2px 3px rgba(255, 0, 0, 0.737); /* Horizontal shadow, Vertical shadow, Blur radius, Color */
+
+        }
+        
+        #zxcvfdsa{
+            font-family: "Exo 2", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            color: white;
+        }
+
+        
+        .shadowed-text {
+            text-shadow: 5px 5px 7px rgb(0, 0, 0); /* Horizontal shadow, Vertical shadow, Blur radius, Color */
+        }
+        
+
+
+
+
+
+
+
+  
+        
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="content">
+       <header>
+           <h1 class="Zoom-effect"> Disco Dance</h1>
+       </header>
+       <nav>
+           <a href="#about">Gallery</a>
+           <a href="#schedule">Responsbalities</a>
+           <a href="ENTERTIMENT.html">ENTERTIMENT</a>
+           <a href="#contact">Chef Gestues</a>
+       </nav>
+
+    <button id="asdfghjkl">Hide</button>
+    <h1 id="zxcvbnm">Music Visualizer</h1>
+    <audio id="music" src="0309.MP3" controls></audio> <!-- Change 'your-music-file.mp3' to your music file -->
+    <script>
+        let audio = document.getElementById('music');
+        let context;
+
+        // Function to create AudioContext
+        function createAudioContext() {
+            try {
+                window.AudioContext = window.AudioContext || window.webkitAudioContext;
+                context = new AudioContext();
+                const analyser = context.createAnalyser();
+                const source = context.createMediaElementSource(audio);
+                source.connect(analyser);
+                analyser.connect(context.destination);
+                analyser.fftSize = 256;
+                const bufferLength = analyser.frequencyBinCount;
+                const dataArray = new Uint8Array(bufferLength);
+
+                function animate() {
+                    requestAnimationFrame(animate);
+                    analyser.getByteFrequencyData(dataArray);
+                    const sum = dataArray.reduce((a, b) => a + b, 0);
+                    const average = sum / bufferLength;
+                    const hue = map(average, 0, 255, 0, 360);
+                    document.body.style.backgroundColor = `hsl(${hue}, 100%, 50%)`;
+                }
+
+                function map(value, min1, max1, min2, max2) {
+                    return min2 + (value - min1) * (max2 - min2) / (max1 - min1);
+                }
+
+                animate();
+                audio.play();
+            } catch (error) {
+                console.error('Error creating AudioContext:', error);
+            }
+        }
+
+        // Call function to create AudioContext
+        createAudioContext();
+
+        const toggleButton = document.getElementById('asdfghjkl');
+        const textElement = document.getElementById('music','zxcvbnm');
+
+
+
+
+        // Add event listener to the button
+        toggleButton.addEventListener('click', function() {
+            // Toggle the visibility of the text element
+            if (textElement.style.display === 'none') {
+                textElement.style.display = 'block';
+            } else {
+                textElement.style.display = 'none';
+            }
+        });
+
+
+    </script>
+</body>
+</html>

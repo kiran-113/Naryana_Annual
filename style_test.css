@@ -1,0 +1,146 @@
+     .content::before {
+    content: "";
+    background-image: url('https://images.hdqwalls.com/wallpapers/dark-abstract-black-low-poly-n1.jpg') ;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+        .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #00000000;
+            color: #ff0000;
+            padding: 20px;
+
+            text-align: center;
+            font-family: "Kode Mono", monospace;
+            font-optical-sizing: auto;
+            font-weight: bolder;
+            font-style: normal;
+            box-shadow: inset 0 0 5px rgba(0, 0, 255, 0.5); /* Horizontal offset, Vertical offset, Blur radius, Color */
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Horizontal shadow, Vertical shadow, Blur radius, Color */
+
+        }
+        nav {
+            background-color: #c08601;
+            padding: 5px;
+            text-align: center;
+            font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+
+        }
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #00000000;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #00000000;
+            color: #00000000;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+
+        .containers {
+            width: 100%;
+            overflow: hidden; /* Clear float */
+        }
+        
+        .contents {
+            display: flex;
+        }
+        
+        .image,
+        .text {
+            flex: 1; /* Distribute space evenly */
+            padding: 10px; /* Adjust as needed */
+        }
+        
+        .image img {
+            max-width: 100%;
+            height: auto;
+            
+        }
+        
+        /* Media query for mobile devices */
+        @media screen and (max-width: 768px) {
+            .contents {
+                flex-direction: column; /* Stack items vertically */
+            }
+        }
+
+        #zswedd{
+
+            font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color:#00B5E2;
+  text-shadow: 2px 2px 3px rgba(255, 0, 0, 0.737); /* Horizontal shadow, Vertical shadow, Blur radius, Color */
+
+        }
+        
+        #zxcvfdsa{
+            font-family: "Exo 2", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            color: white;
+        }
+
+        
+        .shadowed-text {
+            text-shadow: 5px 5px 7px rgb(0, 0, 0); /* Horizontal shadow, Vertical shadow, Blur radius, Color */
+        }
+
+        #asdfghjkl{
+
+           margin-top: 10px;
+        }
+        
+
+
+
+
+
+
+
+  
+        
