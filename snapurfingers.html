@@ -15,11 +15,173 @@
             background-color: #f0f0f0; /* Default background color */
             transition: background-color 0.5s ease; /* Smooth transition */
         }
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+nav a:hover {
+    background-color: #00000000;
+}
+section {
+    padding: 20px;
+}
+footer {
+    background-color: #00000000;
+    color: #00000000;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.containers {
+    width: 100%;
+    overflow: hidden; /* Clear float */
+}
+
+.contents {
+    display: flex;
+}
+
+.image,
+.text {
+    flex: 1; /* Distribute space evenly */
+    padding: 10px; /* Adjust as needed */
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    .contents {
+        flex-direction: column; /* Stack items vertically */
+    }
+}
+
+#zswedd{
+
+    font-family: "Anta", sans-serif;
+font-weight: 400;
+font-style: italic;
+color:#00B5E2;
+text-shadow: 2px 2px 3px rgba(255, 0, 0, 0.737); /* Horizontal shadow, Vertical shadow, Blur radius, Color */
+}
+
+
+
+#asdfghjkl {
+                    position: fixed;
+                    top: 20px; /* Adjust as needed */
+                    right: 20px; /* Adjust as needed */
+                    padding: 10px 20px;
+                    background-color: #007bff;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    z-index: 1000; /* Ensure it's above other content */
+                }
+
+
+
+
+
+  
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+        .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+header {
+            background-color: #00000000;
+            color: #ff0000;
+            padding: 20px;
+
+            text-align: center;
+            font-family: "Kode Mono", monospace;
+            font-optical-sizing: auto;
+            font-weight: bolder;
+            font-style: normal;
+
+        }
+
+
+nav {
+            background-color: #c0870100;
+            padding: 5px;
+            text-align: center;
+            font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+
+        }
+
+
+
+                
+        #zxcvfdsa{
+            font-family: "Exo 2", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            color: white;
+        }
+
+        
+        .shadowed-text {
+            text-shadow: 5px 5px 7px rgb(0, 0, 0); /* Horizontal shadow, Vertical shadow, Blur radius, Color */
+        }
+        
     </style>
 </head>
+<header>
+    <h1 class="Zoom-effect"> Disco Dance</h1>
+</header>
+<nav>
+    <a href="#about">Gallery</a>
+    <a href="#schedule">Responsbalities</a>
+    <a href="ENTERTIMENT.html">ENTERTIMENT</a>
+    <a href="#contact">Chef Gestues</a>
+</nav>
+<nav >
+ <a href="snapurfingers.html">Tap U R Finger</a>
+ <a href="Disco_Dance.html">Disco Dance</a>
+ <a href="index.html">Home </a>
+ <a href="#contact">Chef Gestues</a>
+</nav>
 <body>
+
+
+
+
+
     <h1>Tap You Are Finger Background Change</h1>
 
+
+    
     <script>
         document.addEventListener('click', function() {
             // Change background color to a random color on click
