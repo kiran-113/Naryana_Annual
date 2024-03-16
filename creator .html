@@ -9,23 +9,13 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-
             color: #fff;
+            background-image: url('https://wallpaper.dog/large/10857274.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Ensure the background stays fixed while scrolling */
         }
 
-        .content::before {
-    content: "";
-    background-image: url('https://wallpaper.dog/large/10857274.jpg') ;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    animation: fadeIn 2s ease-in-out forwards;
-}
         header {
             text-align: center;
             margin-bottom: 20px;
@@ -44,6 +34,7 @@
 
         main {
             text-align: justify;
+            padding: 20px; /* Add padding to keep content away from edges */
         }
 
         footer {
@@ -58,35 +49,81 @@
     </style>
 </head>
 <body>
-    <div class="content">
-        <header>
-            <h1>Your Name</h1>
-            <p>Official Website</p>
-        </header>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <main>
-            <section id="about">
-                <h2>About Me</h2>
-                <p>Hi, I'm NKV Harshvardhan, also known as Rodan_5000 in the technical world. Currently, I'm a student at Narayana Olympiad School, pursuing my passion for technology and computer science.</p>
-                <p>My goal is to become an AWS Engineer, leveraging my skills in cloud computing and infrastructure management to design and deploy scalable, reliable, and cost-effective solutions for businesses.</p>
-                <p>Throughout my academic journey, I've been actively involved in various tech-related projects and competitions, honing my skills in programming, networking, and system administration. I'm passionate about learning new technologies and staying updated with the latest trends in the industry.</p>
-                <p>Feel free to explore my portfolio and get in touch if you have any questions or opportunities for collaboration.</p>
-            </section>
-            <section id="portfolio">
-                <h2>Portfolio</h2>
-                <p>Showcase your work or achievements here.gggggggggggggggggggggggggggggggggggggggggggvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvffffffffffffffffgf..</p>
-            </section>
-            <section id="contact">
-                <h2>Contact</h2>
-                <p>Contact information and a contact form can go here...</p>
-            </section>
-        </main>
+    <header>
+        <h1>Your Name</h1>
+        <p>Official Website</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi, I'm Rodan_5000 in the technical world. Currently, I'm a student at Narayana Olympiad School, pursuing my passion for technology and computer science.</p>
+            <p>My goal is to become an AWS Engineer, leveraging my skills in cloud computing and infrastructure management to design and deploy scalable, reliable, and cost-effective solutions for businesses.</p>
+            <p>Throughout my academic journey, I've been actively involved in various tech-related projects and competitions, honing my skills in programming, networking, and system administration. I'm passionate about learning new technologies and staying updated with the latest trends in the industry.</p>
+            <p>Feel free to explore my portfolio and get in touch if you have any questions or opportunities for collaboration.</p>
+        </section>
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="achievement">
+                <h3>Certified Coder</h3>
+                <p>I am a certified coder from WhiteHat Jr, where I have learned coding skills and developed various projects, including web applications, games, and animations.</p>
+            </div>
+            <div class="achievement">
+                <h3>Certified Game Developer</h3>
+                <p>I am also certified as a game developer from WhiteHat Jr, where I have created interactive and engaging games using platforms like Scratch, Unity, or other game development frameworks.</p>
+            </div>
+            <div class="achievement">
+                <h3>Video Editor</h3>
+                <p>During my journey, I have gained experience as a video editor, creating and editing videos for various purposes, including gaming content, tutorials, and promotional videos.</p>
+            </div>
+            <div class="achievement">
+                <h3>YouTube Channel</h3>
+                <p>As a passionate gamer and content creator, I run a YouTube channel where I share my gaming experiences, tutorials, tips, and tricks with my audience.</p>
+            </div>
+        </section>
 
-    </div>
+        <section id="websites">
+            <h2>My Creations</h2>
+            <div class="website">
+                <h3>Website 1</h3>
+                <p>A B&K theamed classic website for my school</p>
+                <a href="https://kiran-113.github.io/kedar-school/" target="_blank" class="btn">Visit Website 1</a>
+            </div>
+            <div class="website">
+                <h3>Website 2</h3>
+                <p>bueatiful yellow theamed website for maths day</p>
+                <a href=" https://kiran-113.github.io/kedar-maths/" target="_blank" class="btn">Visit Website 2</a>
+            </div>
+            <div class="website">
+                <h3>Website 3</h3>
+                <p>bueatiful website for farewell</p>
+                <a href="https://kiran-113.github.io/farewell/" target="_blank" class="btn">Visit Website 3</a>
+            </div>
+            <div class="website">
+                <h3>Website 3</h3>
+                <p>Fatastic website for annual day</p>
+                <a href=" https://kiran-113.github.io/Naryana_Annual/" target="_blank" class="btn">Visit Website 3</a>
+            </div>
+        </section>
+        
+        
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:nkvharshvardhan@gmail.com">nkvharshvardhan@gmail.com</a></p>
+                <p>Phone: <a href="tel:+919985546322">9985546322</a></p>
+            </div>
+            <div class="hire-me">
+                <h3>Hire Me</h3>
+                <p>Looking for a passionate coder, game developer, or video editor? Feel free to reach out to discuss your project requirements or collaborations.</p>
+                <p>I'm available for freelance work and excited to take on new challenges!</p>
+            </div>
+        </section>
+    </main>
     <footer>
         &copy; 2024 Your Name. All rights reserved.
     </footer>
