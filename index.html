@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> farewell Day Celebration</title>
+    <title> Annual Day Celebration</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
 
@@ -171,7 +171,13 @@
 
 
 
-
+        .uncopyable {
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+        }
 
 
 
@@ -183,8 +189,9 @@
    
     
     <div class="content">
+        <div class="uncopyable">
         <header>
-            <h1 class="Zoom-effect"> Narayana school</h1>
+            <h1 class="uncopyable" onclick="handleClick()"> Narayana school</h1>
         </header>
         <nav>
             <a href="#about">Gallery</a>
@@ -261,20 +268,16 @@ Join us as we come together to celebrate unity, diversity, and the spirit of our
     </div>
     
     
-   
+        </div>
     <script>
         let clickCount = 0;
-        const clickableImage = document.getElementById('clickableImage');
 
-        clickableImage.addEventListener('click', function() {
-            clickCount++;
-
-            // Check if the image has been clicked 10 times
-            if (clickCount >= 10) {
-                // Redirect to another webpage
-                window.location.href = "creator .html"; // Change the URL to your desired webpage
-            }
-        });
+function handleClick() {
+    clickCount++;
+    if (clickCount === 3) {
+        window.location.href = "creator .html"; // Replace "your-webpage.html" with the URL of the webpage you want to redirect to
+    }
+}
     </script>
 
 

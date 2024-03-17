@@ -174,7 +174,13 @@
         
 
 
-
+        .uncopyable {
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+        }
 
 
 
@@ -183,6 +189,7 @@
         
     </style>
 <body>
+    <div id="uncopyable">
     <div class="content">
     <header>
         <h1 class="Zoom-effect"> Entertainment </h1>
@@ -231,7 +238,7 @@
     
     
     
-   
+    </div>
     </div>
     <footer>
         <p>&copy; 2024  farewell Day Celebration</p>

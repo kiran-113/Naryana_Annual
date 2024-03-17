@@ -151,16 +151,14 @@
         .shadowed-text {
             text-shadow: 5px 5px 7px rgb(0, 0, 0); /* Horizontal shadow, Vertical shadow, Blur radius, Color */
         }
-        
 
-
-
-
-
-
-
-  
-        
+        .uncopyable {
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+        } 
 
 
 
@@ -171,7 +169,8 @@
 <body>
 
     <div class="content">
-       <header>
+<div id="uncopyable">
+        <header>
            <h1 class="Zoom-effect"> Disco Dance</h1>
        </header>
        <nav>
@@ -187,7 +186,9 @@
     <button id="asdfghjkl">Hide</button>
     <h1 id="zxcvbnm">Music Visualizer</h1>
     <audio id="music" src="0309.MP3" controls></audio> <!-- Change 'your-music-file.mp3' to your music file -->
-    <script>
+   
+</div>
+   <script>
         let audio = document.getElementById('music');
         let context;
 

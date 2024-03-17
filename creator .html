@@ -66,9 +66,18 @@
     height: auto; /* Automatically adjust height based on width */
 }
   
+.uncopyable {
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+        }
+
     </style>
 </head>
 <body>
+    <div id="uncopyable">
     <header>
         <h1>Rodan 5000's</h1>
         <p>Official Website</p>
@@ -158,6 +167,7 @@
                 <p>I'm available for freelance work and excited to take on new challenges!</p>
             </div>
         </section>
+    </div>
     </main>
     <footer>
         &copy; 2024 Your Name. All rights reserved.
