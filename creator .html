@@ -47,12 +47,26 @@
             width: 100%;
         }
 
+
+#playButton{
+    font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  background-color: black;
+  color: yellow;
+}
+
+#equalizer {
+    background-color: rgba(0, 0, 0, 0); /* Transparent background */
+}
+
+
   
     </style>
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
+        <h1>Rodan 5000's</h1>
         <p>Official Website</p>
     </header>
     <nav>
@@ -60,6 +74,8 @@
         <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
     </nav>
+    <button id="playButton"> committee</a> </button>
+
     <main>
         <section id="about">
             <h2>About Me</h2>
@@ -88,6 +104,9 @@
             </div>
         </section>
 
+        <audio id="audio" src="Ed Sheeran - Take Me Back To London (feat. Stormzy) [Official Lyric Video]-audio.webm"></audio>
+<canvas id="equalizer" width="400" height="100"></canvas>
+<button id="toggleButton">Play/Pause</button>
         <section id="websites">
             <h2>My Creations</h2>
             <div class="website">
@@ -129,5 +148,74 @@
     <footer>
         &copy; 2024 Your Name. All rights reserved.
     </footer>
+
+
+
+
+    <script>
+
+var audio = document.getElementById("audio");
+var toggleButton = document.getElementById("toggleButton");
+
+toggleButton.addEventListener("click", function() {
+    if (audio.paused) {
+        audio.play();
+        toggleButton.textContent = "Pause";
+    } else {
+        audio.pause();
+        toggleButton.textContent = "Play";
+    }
+});
+
+
+
+        // Get the audio element and canvas
+var audio = document.getElementById("audio");
+var canvas = document.getElementById("equalizer");
+var ctx = canvas.getContext("2d");
+
+// Create the analyser node
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+var analyser = audioCtx.createAnalyser();
+var source = audioCtx.createMediaElementSource(audio);
+source.connect(analyser);
+analyser.connect(audioCtx.destination);
+
+// Set up the analyser
+analyser.fftSize = 256;
+var bufferLength = analyser.frequencyBinCount;
+var dataArray = new Uint8Array(bufferLength);
+
+// Draw the equalizer
+function drawEqualizer() {
+    requestAnimationFrame(drawEqualizer);
+
+    analyser.getByteFrequencyData(dataArray);
+
+    ctx.fillStyle = "#D9DDDC";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    var barWidth = (canvas.width / bufferLength) * 2.5;
+    var barHeight;
+    var x = 0;
+
+    for(var i = 0; i < bufferLength; i++) {
+        barHeight = dataArray[i] / 2;
+
+        ctx.fillStyle = "rgb(" + (barHeight + 100) + ",50,50)";
+        ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+
+        x += barWidth + 1;
+    }
+}
+
+// Start drawing the equalizer
+drawEqualizer();
+
+// Play the audio
+audio.play();
+
+
+    </script>
 </body>
 </html>
