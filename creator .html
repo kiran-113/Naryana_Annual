@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
     <title>Your Name - Official Website</title>
     <style>
         body {
@@ -48,19 +51,20 @@
         }
 
 
-#playButton{
-    font-family: "Pacifico", cursive;
+#toggleButton{
+    font-family: "Gruppo", sans-serif;
   font-weight: 400;
   font-style: normal;
+
   background-color: black;
   color: yellow;
 }
 
+
 #equalizer {
-    background-color: rgba(0, 0, 0, 0); /* Transparent background */
+   width: 100%; /* Make the canvas fill its container's width */
+    height: auto; /* Automatically adjust height based on width */
 }
-
-
   
     </style>
 </head>
@@ -104,9 +108,19 @@
             </div>
         </section>
 
+
+
+
         <audio id="audio" src="Ed Sheeran - Take Me Back To London (feat. Stormzy) [Official Lyric Video]-audio.webm"></audio>
-<canvas id="equalizer" width="400" height="100"></canvas>
-<button id="toggleButton">Play/Pause</button>
+        <div class="canvas-container">
+        <canvas id="equalizer" width="400" height="100"></canvas>
+        </div>
+        <button id="toggleButton" id="">Play/Pause</button>
+
+
+
+
+
         <section id="websites">
             <h2>My Creations</h2>
             <div class="website">
@@ -192,7 +206,7 @@ function drawEqualizer() {
 
     analyser.getByteFrequencyData(dataArray);
 
-    ctx.fillStyle = "#D9DDDC";
+    ctx.fillStyle = "black";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     var barWidth = (canvas.width / bufferLength) * 2.5;
